@@ -10,107 +10,107 @@ using Prueba.Net.Models;
 
 namespace Prueba.Net.Controllers
 {
-    public class CompañiaController : Controller
+    public class CompaniesController : Controller
     {
         private DatabaseContext db = new DatabaseContext();
 
-        // GET: Compañia
+        // GET: Companies
         public ActionResult Index()
         {
-            return View(db.compañia.ToList());
+            return View(db.Company.ToList());
         }
 
-        // GET: Compañia/Details/5
+        // GET: Companies/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.compañia.Find(id);
-            if (compañia == null)
+            Company company = db.Company.Find(id);
+            if (company == null)
             {
                 return HttpNotFound();
             }
-            return View(compañia);
+            return View(company);
         }
 
-        // GET: Compañia/Create
+        // GET: Companies/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Compañia/Create
+        // POST: Companies/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_compañia,nombre_compañia,descripcion,estado")] Compañia compañia)
+        public ActionResult Create([Bind(Include = "id_compañia,nombre_compañia,descripcion,estado")] Company company)
         {
             if (ModelState.IsValid)
             {
-                db.compañia.Add(compañia);
+                db.Company.Add(company);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(compañia);
+            return View(company);
         }
 
-        // GET: Compañia/Edit/5
+        // GET: Companies/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.compañia.Find(id);
-            if (compañia == null)
+            Company company = db.Company.Find(id);
+            if (company == null)
             {
                 return HttpNotFound();
             }
-            return View(compañia);
+            return View(company);
         }
 
-        // POST: Compañia/Edit/5
+        // POST: Companies/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_compañia,nombre_compañia,descripcion,estado")] Compañia compañia)
+        public ActionResult Edit([Bind(Include = "id_compañia,nombre_compañia,descripcion,estado")] Company company)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(compañia).State = EntityState.Modified;
+                db.Entry(company).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(compañia);
+            return View(company);
         }
 
-        // GET: Compañia/Delete/5
+        // GET: Companies/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.compañia.Find(id);
-            if (compañia == null)
+            Company company = db.Company.Find(id);
+            if (company == null)
             {
                 return HttpNotFound();
             }
-            return View(compañia);
+            return View(company);
         }
 
-        // POST: Compañia/Delete/5
+        // POST: Companies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Compañia compañia = db.compañia.Find(id);
-            db.compañia.Remove(compañia);
+            Company company = db.Company.Find(id);
+            db.Company.Remove(company);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

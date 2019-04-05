@@ -132,21 +132,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CompañiaController.cs" />
+    <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductoSegsController.cs" />
-    <Compile Include="Controllers\RolSegsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Ciudad.cs" />
-    <Compile Include="Models\Compañia.cs" />
+    <Compile Include="Mapper\CityMapper.cs" />
+    <Compile Include="Mapper\CompanyMapper.cs" />
+    <Compile Include="Mapper\DepartamentMapper.cs" />
+    <Compile Include="Mapper\ProductSegMapper.cs" />
+    <Compile Include="Mapper\RolSegMapper.cs" />
+    <Compile Include="Mapper\SaleMapper.cs" />
+    <Compile Include="Mapper\TypeDocumentMapper.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
-    <Compile Include="Models\Departamento.cs" />
-    <Compile Include="Models\ProductoSeg.cs" />
+    <Compile Include="Models\Departament.cs" />
+    <Compile Include="Models\ProductSeg.cs" />
     <Compile Include="Models\RolSeg.cs" />
-    <Compile Include="Models\TipoDocument.cs" />
-    <Compile Include="Models\Venta.cs" />
+    <Compile Include="Models\TypeDocument.cs" />
+    <Compile Include="Models\Sale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,24 +187,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Companies\Create.cshtml" />
+    <Content Include="Views\Companies\Delete.cshtml" />
+    <Content Include="Views\Companies\Details.cshtml" />
+    <Content Include="Views\Companies\Edit.cshtml" />
+    <Content Include="Views\Companies\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Compañia\Create.cshtml" />
-    <Content Include="Views\Compañia\Delete.cshtml" />
-    <Content Include="Views\Compañia\Details.cshtml" />
-    <Content Include="Views\Compañia\Edit.cshtml" />
-    <Content Include="Views\Compañia\Index.cshtml" />
-    <Content Include="Views\RolSegs\Create.cshtml" />
-    <Content Include="Views\RolSegs\Delete.cshtml" />
-    <Content Include="Views\RolSegs\Details.cshtml" />
-    <Content Include="Views\RolSegs\Edit.cshtml" />
-    <Content Include="Views\RolSegs\Index.cshtml" />
-    <Content Include="Views\ProductoSegs\Create.cshtml" />
-    <Content Include="Views\ProductoSegs\Delete.cshtml" />
-    <Content Include="Views\ProductoSegs\Details.cshtml" />
-    <Content Include="Views\ProductoSegs\Edit.cshtml" />
-    <Content Include="Views\ProductoSegs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

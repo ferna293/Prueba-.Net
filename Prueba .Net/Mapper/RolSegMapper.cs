@@ -15,7 +15,7 @@ namespace Prueba.Net.Mapper
 
             HasKey(x => x.id_rol).Property(x => x.id_rol).IsRequired().HasColumnName("id_compañia");
 
-            Property(x => x.nombre_rol).IsRequired().HasMaxLength(50).HasColumnName("nombre_compañia");
+            Property(x => x.nombre_rol).IsRequired().HasMaxLength(50).HasColumnName("nombre_rol");
 
             Property(x => x.descripcion).HasMaxLength(200).HasColumnName("descripcion");
 

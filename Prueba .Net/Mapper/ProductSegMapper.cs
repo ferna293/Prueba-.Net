@@ -23,7 +23,7 @@ namespace Prueba.Net.Mapper
 
             Property(x => x.id_compañia).HasColumnName("nombre_compañia");
 
-            Property(x => x.id_producto).HasColumnName("nombre_producto");
+            Property(x => x.id_rol).HasColumnName("nombre_rol");
         }
     }
 }

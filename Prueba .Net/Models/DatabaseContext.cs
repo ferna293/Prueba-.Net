@@ -18,11 +18,14 @@ namespace Prueba.Net.Models
             base.Dispose(disposing);
         }
 
-        public DbSet<Company> compañia { get; set; }
-
-        public DbSet<RolSeg> rol_seg { get; set; }
-
-        public DbSet<ProductSeg> producto { get; set; }
+        public DbSet<Company> Company { get; set; }
+        public DbSet<RolSeg> RolSeg { get; set; }
+        public DbSet<ProductSeg> Product { get; set; }
+        public DbSet<TypeDocument> TypeDocument { get; set; }
+        public DbSet<Departament> Departament { get; set; }
+        public DbSet<City> City { get; set; }
+        public DbSet<Sale> Sale { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

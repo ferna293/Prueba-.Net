@@ -14,7 +14,7 @@ namespace Prueba.Net.Mapper
         {
             ToTable("compañia", schema);
 
-            HasKey(x => x.id_compañia).Property(x => x.id_compañia).IsRequired().HasColumnName("id_compañia"); 
+            HasKey(x => x.id_compañia).Property(x => x.id_compañia).HasColumnName("id_compañia"); 
 
             Property(x => x.nombre_compañia).IsRequired().HasMaxLength(20).HasColumnName("nombre_compañia");
 
