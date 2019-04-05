@@ -17,7 +17,8 @@ namespace Prueba.Net.Controllers
         // GET: Sales
         public ActionResult Index()
         {
-            return View(db.Sale.ToList());
+            var sale = db.Sale.Include(s => s.product);
+            return View(sale.ToList());
         }
 
         // GET: Sales/Details/5
@@ -38,6 +39,7 @@ namespace Prueba.Net.Controllers
         // GET: Sales/Create
         public ActionResult Create()
         {
+            ViewBag.id_producto = new SelectList(db.Product, "id_producto", "nombre_producto");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace Prueba.Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id_venta,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,idTipoDocument,numero_documento,correo_electronico,telefono,idDepartamento,idCiudad,obervacion")] Sale sale)
+        public ActionResult Create([Bind(Include = "id_venta,id_producto,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,idTipoDocument,numero_documento,correo_electronico,telefono,idDepartamento,idCiudad,obervacion")] Sale sale)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace Prueba.Net.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.id_producto = new SelectList(db.Product, "id_producto", "nombre_producto", sale.id_producto);
             return View(sale);
         }
 
@@ -70,6 +73,7 @@ namespace Prueba.Net.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.id_producto = new SelectList(db.Product, "id_producto", "nombre_producto", sale.id_producto);
             return View(sale);
         }
 
@@ -78,7 +82,7 @@ namespace Prueba.Net.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id_venta,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,idTipoDocument,numero_documento,correo_electronico,telefono,idDepartamento,idCiudad,obervacion")] Sale sale)
+        public ActionResult Edit([Bind(Include = "id_venta,id_producto,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,idTipoDocument,numero_documento,correo_electronico,telefono,idDepartamento,idCiudad,obervacion")] Sale sale)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace Prueba.Net.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.id_producto = new SelectList(db.Product, "id_producto", "nombre_producto", sale.id_producto);
             return View(sale);
         }
 
