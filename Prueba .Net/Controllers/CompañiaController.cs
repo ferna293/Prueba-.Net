@@ -17,7 +17,7 @@ namespace Prueba.Net.Controllers
         // GET: Compañia
         public ActionResult Index()
         {
-            return View(db.Compañias.ToList());
+            return View(db.compañia.ToList());
         }
 
         // GET: Compañia/Details/5
@@ -27,7 +27,7 @@ namespace Prueba.Net.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.Compañias.Find(id);
+            Compañia compañia = db.compañia.Find(id);
             if (compañia == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace Prueba.Net.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Compañias.Add(compañia);
+                db.compañia.Add(compañia);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace Prueba.Net.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.Compañias.Find(id);
+            Compañia compañia = db.compañia.Find(id);
             if (compañia == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace Prueba.Net.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Compañia compañia = db.Compañias.Find(id);
+            Compañia compañia = db.compañia.Find(id);
             if (compañia == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace Prueba.Net.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Compañia compañia = db.Compañias.Find(id);
-            db.Compañias.Remove(compañia);
+            Compañia compañia = db.compañia.Find(id);
+            db.compañia.Remove(compañia);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

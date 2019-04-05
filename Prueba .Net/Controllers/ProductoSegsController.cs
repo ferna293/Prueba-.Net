@@ -39,7 +39,7 @@ namespace Prueba.Net.Controllers
         // GET: ProductoSegs/Create
         public ActionResult Create()
         {
-            ViewBag.id_compañia = new SelectList(db.Compañias, "id_compañia", "nombre_compañia");
+            ViewBag.id_compañia = new SelectList(db.compañia, "id_compañia", "nombre_compañia");
             ViewBag.id_rol = new SelectList(db.RolSegs, "id_rol", "nombre_rol");
             return View();
         }
@@ -58,7 +58,7 @@ namespace Prueba.Net.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.id_compañia = new SelectList(db.Compañias, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
+            ViewBag.id_compañia = new SelectList(db.compañia, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
             ViewBag.id_rol = new SelectList(db.RolSegs, "id_rol", "nombre_rol", productoSeg.id_rol);
             return View(productoSeg);
         }
@@ -75,7 +75,7 @@ namespace Prueba.Net.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.id_compañia = new SelectList(db.Compañias, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
+            ViewBag.id_compañia = new SelectList(db.compañia, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
             ViewBag.id_rol = new SelectList(db.RolSegs, "id_rol", "nombre_rol", productoSeg.id_rol);
             return View(productoSeg);
         }
@@ -93,7 +93,7 @@ namespace Prueba.Net.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.id_compañia = new SelectList(db.Compañias, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
+            ViewBag.id_compañia = new SelectList(db.compañia, "id_compañia", "nombre_compañia", productoSeg.id_compañia);
             ViewBag.id_rol = new SelectList(db.RolSegs, "id_rol", "nombre_rol", productoSeg.id_rol);
             return View(productoSeg);
         }

@@ -18,15 +18,24 @@ namespace Prueba.Net.Models
             base.Dispose(disposing);
         }
 
-        public DbSet<Compañia> Compañias { get; set; }
+        public DbSet<Company> compañia { get; set; }
+
+        public DbSet<RolSeg> rol_seg { get; set; }
+
+        public DbSet<ProductSeg> producto { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Configurations.Add(new Mapper.CompanyMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.RolSegMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.ProductSegMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.TypeDocumentMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.DepartamentMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.CityMapper("dbo"));
+            modelBuilder.Configurations.Add(new Mapper.SaleMapper("dbo"));
         }
 
-        public System.Data.Entity.DbSet<Prueba.Net.Models.RolSeg> RolSegs { get; set; }
-
-        public System.Data.Entity.DbSet<Prueba.Net.Models.ProductoSeg> ProductoSegs { get; set; }
+        
     }
 }
