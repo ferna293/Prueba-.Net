@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,12 +132,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CompañiaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductoSegsController.cs" />
+    <Compile Include="Controllers\RolSegsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Ciudad.cs" />
     <Compile Include="Models\Compañia.cs" />
+    <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\Departamento.cs" />
     <Compile Include="Models\ProductoSeg.cs" />
     <Compile Include="Models\RolSeg.cs" />
@@ -175,6 +185,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Compañia\Create.cshtml" />
+    <Content Include="Views\Compañia\Delete.cshtml" />
+    <Content Include="Views\Compañia\Details.cshtml" />
+    <Content Include="Views\Compañia\Edit.cshtml" />
+    <Content Include="Views\Compañia\Index.cshtml" />
+    <Content Include="Views\RolSegs\Create.cshtml" />
+    <Content Include="Views\RolSegs\Delete.cshtml" />
+    <Content Include="Views\RolSegs\Details.cshtml" />
+    <Content Include="Views\RolSegs\Edit.cshtml" />
+    <Content Include="Views\RolSegs\Index.cshtml" />
+    <Content Include="Views\ProductoSegs\Create.cshtml" />
+    <Content Include="Views\ProductoSegs\Delete.cshtml" />
+    <Content Include="Views\ProductoSegs\Details.cshtml" />
+    <Content Include="Views\ProductoSegs\Edit.cshtml" />
+    <Content Include="Views\ProductoSegs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,18 +25,18 @@ namespace Prueba.Net.Models
         [Required(ErrorMessage = "El campo Estado es obligatorio")]
         public bool estado { get; set; }
 
-        [StringLength(20)]
         [Display(Name = "Compañia")]
         [Required(ErrorMessage = "El campo Compañia es obligatorio")]
-        [ForeignKey("idCompañia")]
-        public int idCompañia { get; set; }
+        public int id_compañia { get; set; }
+        [ForeignKey("id_compañia")]
+        public virtual Compañia compañia { get; set; }
 
-        [StringLength(50)]
         [Display(Name = "Rol Producto")]
         [Required(ErrorMessage = "El campo Rol Producto es obligatorio")]
-        [ForeignKey("idRol")]
-        public int idRol { get; set; }
-        
+        public int id_rol { get; set; }
+        [ForeignKey("id_rol")]
+        public virtual RolSeg rolSeg { get; set; }
+
 
     }
 }
