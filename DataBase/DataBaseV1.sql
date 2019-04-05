@@ -3,21 +3,21 @@ CREATE DATABASE Prueba;
 USE Prueba;
 
 CREATE TABLE Prueba.compañia (
-    id int PRIMARY KEY,
+    id_compañia int PRIMARY KEY,
     nombre_compañia varchar(20) NOT NULL,
     descripcion varchar(200),
 	estado bit,
 );
 
 CREATE TABLE Prueba.rol_seg(
-	id int PRIMARY KEY,
+	id_rol int PRIMARY KEY,
 	nombre_rol varchar(50) NOT NULL,
 	descripcion varchar(200),
 	estado bit,
 );
 
 CREATE TABLE Prueba.producto(
-	id int PRIMARY KEY,
+	id_producto int PRIMARY KEY,
 	nombre_producto varchar(50) NOT NULL,
 	descripcion varchar(200),
 	estado bit,
@@ -28,25 +28,25 @@ CREATE TABLE Prueba.producto(
 );
 
 CREATE TABLE Prueba.tipo_document(
-	id int PRIMARY KEY,
+	id_tipo_document int PRIMARY KEY,
 	nombre_document varchar(20) NOT NULL,
 	estado bit,
 );
 
 CREATE TABLE Prueba.departamento(
-	id int PRIMARY KEY,
+	id_departamento int PRIMARY KEY,
 	nombre_departamento varchar(20) NOT NULL,
 	estado bit,
 );
 
 CREATE TABLE Prueba.ciudad(
-	id int PRIMARY KEY,
+	id_ciudad int PRIMARY KEY,
 	nombre_ciudad varchar(20) NOT NULL,
 	estado bit,
 );
 
 CREATE TABLE Prueba.venta(
-	id int PRIMARY KEY,
+	id_venta int PRIMARY KEY,
 	nombre_producto varchar(50) NOT NULL,
 	primer_nombre varchar(20) NOT NULL,
 	segundo_nombre varchar(20),
