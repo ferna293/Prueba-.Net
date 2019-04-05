@@ -1,22 +1,23 @@
-CREATE DATABASE Prueba;
+CREATE DATABASE Hola 
+GO
 
-USE Prueba;
+USE Test;
 
-CREATE TABLE Prueba.compañia (
+CREATE TABLE Hola.compañia (
     id_compañia int PRIMARY KEY,
     nombre_compañia varchar(20) NOT NULL,
     descripcion varchar(200),
 	estado bit,
 );
 
-CREATE TABLE Prueba.rol_seg(
+CREATE TABLE Hola.rol_seg(
 	id_rol int PRIMARY KEY,
 	nombre_rol varchar(50) NOT NULL,
 	descripcion varchar(200),
 	estado bit,
 );
 
-CREATE TABLE Prueba.producto(
+CREATE TABLE Hola.producto(
 	id_producto int PRIMARY KEY,
 	nombre_producto varchar(50) NOT NULL,
 	descripcion varchar(200),
@@ -27,25 +28,25 @@ CREATE TABLE Prueba.producto(
 	FOREIGN KEY (nombre_rol) REFERENCES Prueba.rol_seg (nombre_rol),
 );
 
-CREATE TABLE Prueba.tipo_document(
+CREATE TABLE Hola.tipo_document(
 	id_tipo_document int PRIMARY KEY,
 	nombre_document varchar(20) NOT NULL,
 	estado bit,
 );
 
-CREATE TABLE Prueba.departamento(
+CREATE TABLE Hola.departamento(
 	id_departamento int PRIMARY KEY,
 	nombre_departamento varchar(20) NOT NULL,
 	estado bit,
 );
 
-CREATE TABLE Prueba.ciudad(
+CREATE TABLE Hola.ciudad(
 	id_ciudad int PRIMARY KEY,
 	nombre_ciudad varchar(20) NOT NULL,
 	estado bit,
 );
 
-CREATE TABLE Prueba.venta(
+CREATE TABLE Hola.venta(
 	id_venta int PRIMARY KEY,
 	nombre_producto varchar(50) NOT NULL,
 	primer_nombre varchar(20) NOT NULL,
@@ -64,3 +65,6 @@ CREATE TABLE Prueba.venta(
 	FOREIGN KEY (nombre_departamento) REFERENCES Prueba.departamento (nombre_departamento),
 	FOREIGN KEY (nombre_ciudad) REFERENCES Prueba.ciudad (nombre_ciudad),
 );
+GO
+
+drop table Hola;
