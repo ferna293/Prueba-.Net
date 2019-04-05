@@ -175,3 +175,4 @@ C:\code\Prueba-.Net\Prueba .Net\obj\Debug\Prueba .Net.csproj.CoreCompileInputs.c
 C:\code\Prueba-.Net\Prueba .Net\obj\Debug\Prueba .Net.csproj.CopyComplete
 C:\code\Prueba-.Net\Prueba .Net\obj\Debug\Prueba.Net.dll
 C:\code\Prueba-.Net\Prueba .Net\obj\Debug\Prueba.Net.pdb
+C:\code\Prueba-.Net\Prueba .Net\obj\Debug\Prueba .Net.csprojAssemblyReference.cache

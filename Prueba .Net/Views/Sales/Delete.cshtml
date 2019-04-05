@@ -1,0 +1,112 @@
+﻿@model Prueba.Net.Models.Sale
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.primer_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.primer_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.segundo_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.segundo_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.primer_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.primer_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.segundo_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.segundo_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idTipoDocument)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTipoDocument)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero_documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero_documento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo_electronico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo_electronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDepartamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDepartamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCiudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCiudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obervacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obervacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

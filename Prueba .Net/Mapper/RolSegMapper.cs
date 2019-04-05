@@ -13,7 +13,7 @@ namespace Prueba.Net.Mapper
         {
             ToTable("rol_seg", schema);
 
-            HasKey(x => x.id_rol).Property(x => x.id_rol).IsRequired().HasColumnName("id_compañia");
+            HasKey(x => x.id_rol).Property(x => x.id_rol).IsRequired().HasColumnName("id_rol");
 
             Property(x => x.nombre_rol).IsRequired().HasMaxLength(50).HasColumnName("nombre_rol");
 

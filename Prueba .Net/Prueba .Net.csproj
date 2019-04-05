@@ -132,8 +132,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
+    <Compile Include="Controllers\DepartamentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductSegsController.cs" />
+    <Compile Include="Controllers\RolSegsController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
+    <Compile Include="Controllers\TypeDocumentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,6 +201,36 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\RolSegs\Create.cshtml" />
+    <Content Include="Views\RolSegs\Delete.cshtml" />
+    <Content Include="Views\RolSegs\Details.cshtml" />
+    <Content Include="Views\RolSegs\Edit.cshtml" />
+    <Content Include="Views\RolSegs\Index.cshtml" />
+    <Content Include="Views\ProductSegs\Create.cshtml" />
+    <Content Include="Views\ProductSegs\Delete.cshtml" />
+    <Content Include="Views\ProductSegs\Details.cshtml" />
+    <Content Include="Views\ProductSegs\Edit.cshtml" />
+    <Content Include="Views\ProductSegs\Index.cshtml" />
+    <Content Include="Views\TypeDocuments\Create.cshtml" />
+    <Content Include="Views\TypeDocuments\Delete.cshtml" />
+    <Content Include="Views\TypeDocuments\Details.cshtml" />
+    <Content Include="Views\TypeDocuments\Edit.cshtml" />
+    <Content Include="Views\TypeDocuments\Index.cshtml" />
+    <Content Include="Views\Departaments\Create.cshtml" />
+    <Content Include="Views\Departaments\Delete.cshtml" />
+    <Content Include="Views\Departaments\Details.cshtml" />
+    <Content Include="Views\Departaments\Edit.cshtml" />
+    <Content Include="Views\Departaments\Index.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Delete.cshtml" />
+    <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
+    <Content Include="Views\Cities\Index.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Edit.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

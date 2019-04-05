@@ -15,6 +15,8 @@ namespace Prueba.Net.Mapper
 
             HasKey(x => x.id_venta).Property(x => x.id_venta).IsRequired().HasColumnName("id_venta");
 
+            Property(x => x.id_producto).HasColumnName("id_producto");
+
             Property(x => x.primer_nombre).IsRequired().HasMaxLength(20).HasColumnName("primer_nombre");
 
             Property(x => x.segundo_nombre).HasMaxLength(20).HasColumnName("segundo_nombre");
